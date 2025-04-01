@@ -1,0 +1,123 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Laila', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url("https://www.katalay.net/images/gallery/images/art/the-swing-painting-by-jean-antoine-watteau-and-jean-honore-fragonard.jpg");
+    background-color:#e0a9a9c7;
+    background-size: cover;
+    background-position: center;
+}
+
+header{
+    background-color:#c0cfcfee;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background-color: #ffffff1a;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+    text-align: center;
+    color: #fff;
+    font-family: 'Laila';
+    
+    display: block;
+    list-style-type: disc;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+label{
+    text-size-adjust: 40px;
+    background-color:rgb(216, 158, 137);
+    padding: 10px 10px;
+    margin: 20px;
+    position: absolute;
+    top: 200px;
+    left: 520px;
+}
+
+.p1 a{
+    text-size-adjust: 40px;
+    background-color:rgb(223, 150, 124);
+    padding: 10px 10px;
+    margin: 50px;
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    color:black;
+}
+
+.p2 a{
+    text-size-adjust: 40px;
+    background-color:rgb(255, 189, 165);
+    padding: 10px 10px;
+    margin: 50px;
+    position: absolute;
+    top: 40%;
+    left: 45%;
+    color:black;
+
+}
+
+.p3 a{
+    text-size-adjust: 40px;
+    background-color:rgb(246, 166, 137);
+    padding: 10px 10px;
+    margin: 50px;
+    position: absolute;
+    top: 40%;
+    left: 70%;
+    color:black;
+}
+
+.p1 a:hover{
+    text-size-adjust: 40px;
+    background-color:rgb(223, 150, 124);
+    padding: 10px 10px;
+    margin: 50px;
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    color:black;
+    font-size: 1.1em;
+}
+
+.p2 a:hover{
+    text-size-adjust: 40px;
+    background-color:rgb(255, 189, 165);
+    padding: 10px 10px;
+    margin: 50px;
+    position: absolute;
+    top: 40%;
+    left: 45%;
+    color:black;
+    font-size: 1.1em;
+}
+
+.p3 a:hover{
+    text-size-adjust: 40px;
+    background-color:rgb(246, 166, 137);
+    padding: 10px 10px;
+    margin: 50px;
+    position: absolute;
+    top: 40%;
+    left: 70%;
+    color:black;
+    font-size: 1.1em;
+}
+

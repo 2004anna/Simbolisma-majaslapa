@@ -1,0 +1,50 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Laila', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url("https://www.katalay.net/images/gallery/images/art/the-swing-painting-by-jean-antoine-watteau-and-jean-honore-fragonard.jpg");
+    background-color:#e0a9a9c7;
+    background-size: cover;
+    background-position: center;
+}
+
+header{
+    background-color:#c0cfcfee;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background-color: #ffffff1a;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+    text-align: center;
+    color: #fff;
+    font-family: 'Laila';
+    
+    display: block;
+    list-style-type: disc;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+p{
+    text-size-adjust: 40px;
+    background-color:rgb(189, 120, 94);
+    padding: 10px 10px;
+    left: 0;
+    right: 0;
+}

@@ -1,0 +1,347 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Laila', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url("https://www.katalay.net/images/gallery/images/art/the-swing-painting-by-jean-antoine-watteau-and-jean-honore-fragonard.jpg");
+    background-color:#00000000;
+    background-size: cover;
+    background-position: center;
+}
+
+header{
+    background-color:#1c5758ee;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background-color: #ffffff1a;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+
+    display: block;
+    list-style-type: disc;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+header .navigation ul{
+    float: right;
+    margin-right: 20px;
+}
+
+header .navigation ul li{
+    display: inline-block;
+    line-height: 50px;
+    margin: 0 5px;
+}
+
+header .navigation ul li a{
+    position: relative;
+    font-size: 1.1em;
+    color:antiquewhite;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+header .navigation ul li a:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    border-radius: 5px;
+    transform-origin: 50% 50%;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    background: linear-gradient(to right, #b2afbc, #d1aeae);
+}
+
+header .navigation ul li a:hover:after{
+    transform-origin: right;
+    transform: scaleX(1);
+}
+
+header .navigation ul li .btnLogin-popup{
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #b2afbc;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #ffff;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+header .navigation ul li .btnLogin-popup:hover{
+    background-color: #1c5758ee;
+    color: #fff0ff;
+}
+
+ul li a.active{
+    background: #fff;
+    transition: 0.5s;
+}
+
+.check_btn{
+    font-size: 25px;
+    color: #fff;
+    float: left;
+    line-height: 50px;
+    margin-right: 10px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+@media(max-width:858px){
+    .check_btn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 50%;
+        height: 70vh;
+        background: #1c5758ee;
+        top: 100px;
+        left: -100%;
+        text-align: left;
+        transition: all 0.5s;
+        border: 2px solid #c9c9c9;
+        border-radius: 6px;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    }
+    header .navigation ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    header .navigation ul li a{
+        font-size: 20px;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+}
+
+.logo{
+    color: white;
+    user-select: none;
+    font-size: 25px;
+    line-height: 50px;
+    padding: 0 10px;
+    font-family: 'Laila', sans-serif;
+    font-weight: bold;
+}
+
+.cover_box{
+    position: relative;
+    width: 400px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid #c9c8c8;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+    overflow: hidden;
+    transition: transform 0.5s ease, height 0.2s ease, border-color 0.5s ease;
+}
+
+.cover_box:hover{
+    border-color:#fff;
+    animation: border-glow 1s infinite alternate;
+}
+
+@keyframes border-glow{
+    from{
+        border-color: #f6f8f6;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    }
+    to{
+        border-color: #ffff;
+        box-shadow: 0 0 20px rgba(255, 255, 255, 1);
+    }
+}
+
+.cover_box.active-popup{
+    transform: scale(1);
+}
+
+.cover_box.active{
+    height: 520px;
+}
+
+.cover_box .form-box{
+    width: 100%;
+    padding: 40px;
+}
+
+.cover_box .form-box.login{
+    transition: transform 0.50s ease;
+    transform: translateX(0);
+}
+
+.cover_box.active .form-box.login{
+    transition: none;
+    transform: translateX(-400px);
+}
+
+.cover_box .form-box.register{
+    position: absolute;
+    transition: none;
+    transform: translateX(400px);
+}
+.cover_box.active .form-box.register{
+    transition: transform 0.50s ease;
+    transform: translateX(0);
+}
+
+.cover_box .icon-close{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 45px;
+    height: 45px;
+    background: #1c5758ee;
+    font-size: 2em;
+    color:#fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.form-box h2{
+    font-size: 2em;
+    color: #051913;
+    text-align: center;
+}
+
+.input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left:10px;
+    transform: translateY(-65%);
+    font-size: 1em;
+    color: #051913;
+    font-weight: 500;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top: -10%;
+}
+
+.input-box input{
+    width: 100%;
+    height: 80%;
+    background: transparent;
+    border: 1px solid #051913;
+    border-radius: 8px;
+    outline: none;
+    font-size: 1em;
+    color: #051913;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+}
+
+.input-box .icon{
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: #051913;
+    line-height: 57px;
+}
+
+.remember-forgot{
+    font-size: 0.9em;
+    color: #051913;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember-forgot label input{
+    accent-color: #051913;
+    margin-right: 3px;
+}
+
+.remember-forgot a{
+    color: #051913;
+    text-decoration: underline;
+}
+.remember-forgot a:hover{
+    text-decoration: underline; 
+}
+
+.btn{
+    width: 100%;
+    height: 45px;
+    background-color: #051913;
+    border: none;
+    outline: none;
+    border-radius: 100px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+}
+
+.login-register{
+    font-size: 0.9em;
+    color: #c9c8c8;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+}
+
+.login-register p a{
+    color: #9a9a9a;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-register p a:hover{
+    text-decoration: underline;
+}
+
